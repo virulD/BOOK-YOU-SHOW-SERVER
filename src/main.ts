@@ -8,10 +8,13 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   // Enable CORS
-  app.enableCors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3001',
-    credentials: true,
-  });
+app.enableCors({
+  origin: [
+    'http://localhost:3001',
+    'https://main.d2xbw1cqd3s4y0.amplifyapp.com'
+  ],
+  credentials: true,
+});
 
   // Global exception filter
   app.useGlobalFilters(new HttpExceptionFilter());
