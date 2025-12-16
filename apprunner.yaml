@@ -1,18 +1,6 @@
-# version: 1.0
-# runtime: nodejs18
 
-# build:
-#   commands:
-#     build:
-#       - npm install
-#       - npm run build
-
-# run:
-#   command: npm run start:prod
-#   network:
-#     port: 3000
 version: 1.0
-runtime: nodejs18  # or nodejs22
+runtime: nodejs22  # or nodejs22
 build:
   commands:
     build:
