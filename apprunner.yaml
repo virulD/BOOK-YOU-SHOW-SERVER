@@ -1,15 +1,13 @@
-
 version: 1.0
-runtime: nodejs22  # or nodejs22
+runtime: nodejs18
+
 build:
   commands:
     build:
       - npm install
-      - npm run build  # if you have a build step
+      - npm run build
+
 run:
-  command: npm start
+  command: npm run start:prod
   network:
-    port: 8080  # Your app port
-  env:
-    - name: NODE_ENV
-      value: production
+    port: 3000
